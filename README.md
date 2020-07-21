@@ -153,3 +153,28 @@ The interface `ITest` is used as a type for the argument received by the `myTest
 Functions can also be defined to return a specific type. And here, the return value must be a string otherwise TS will throw an error.
 
 In summary, interfaces and type aliases help us define what type multiple properties of objects should be defined as.
+
+### Compile Typescript to Javascript
+
+To compile the TS code to JS, go into the root of the project and run the command:
+
+```
+tsc
+```
+
+It will compile every file with a `.ts` extension to Javascript. Because we have a `tsconfig` file,
+the compiler will follow the defined rules and compile only the TS files located in the `src` folder and put the JS code into the `public` directory.
+
+The compiler also allows compiling only a single file.
+
+```
+tsc nameOfFile.ts
+```
+
+If a name of file is not specified, the compiled JS file will take the same name as the TS file.
+Adding a `-w` flag will let the compiler keep watching for a change and recompile when needed,
+instead of recompiling on every change.
+
+```
+tsc -w
+```
