@@ -117,3 +117,39 @@ When dealing with an object of multiple properties, it can be tricky to define t
 Typescript has Interfaces and Type aliases to help with that.
 
 ### Interfaces and Type aliases
+
+These help us define the shape of an object-like data structure.
+The consensus amongst developers is to use `interface` when possible since it is in the default
+`tslint` ruleset.
+
+```
+interface ITest {
+  id: number;
+  name?: string;
+}
+
+type TestType = {
+  id: number,
+  name?: string,
+}
+
+function myTest(args: ITest): string {
+  if (args.name) {
+    return `Hello ${args.name}`
+  }
+  return "Hello Word"
+}
+
+myTest({ id: 1 })
+```
+
+The structure of an interface and a type alias looks similar to ab object.
+They have to define the form of given data with TS.
+
+Here, `name` is optional by adding a question mark `?`.
+If no value is passed to the property `name` it will return undefined as its value.
+
+The interface `ITest` is used as a type for the argument received by the `myTest` function.
+Functions can also be defined to return a specific type. And here, the return value must be a string otherwise TS will throw an error.
+
+In summary, interfaces and type aliases help us define what type multiple properties of objects should be defined as.
