@@ -8,7 +8,8 @@ This application is one that makes a call to the Pokemon API to render various b
 
 1. Clone the repository to your local machine.
 2. Navigate to the root directory.
-3. Right click `index.html` and open in your browser.
+3. [See compilation instructions](###compile-typescript-to-javascript)
+4. Right click `index.html` and open in your browser.
 
 ## Notes
 
