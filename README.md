@@ -3,8 +3,6 @@
 ## Description
 
 This application is one that makes a call to the Pokemon API to render various bits of data about each Pokemon. I will be using it as a learning tool for Typescript.
-Developed with guidance from [ibrahima92](https://github.com/ibrahima92)'s
-[article](https://www.freecodecamp.org/news/a-practical-guide-to-typescript-how-to-build-a-pokedex-app-using-html-css-and-typescript/).
 
 ### Installation and Usage
 
@@ -187,3 +185,8 @@ instead of recompiling on every change.
 ```
 tsc -w
 ```
+
+## Contributors
+
+Developed by Peter Kang with guidance from [ibrahima92](https://github.com/ibrahima92)'s
+[article](https://www.freecodecamp.org/news/a-practical-guide-to-typescript-how-to-build-a-pokedex-app-using-html-css-and-typescript/).
