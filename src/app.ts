@@ -50,7 +50,7 @@ const showPokemon = (pokemon: IPokemon): void => {
               <img class="card--image" src=${pokemon.image} alt=${pokemon.name} />
               <h1 class="card--name">${pokemon.name}</h1>
               <span class="card--details">Type: ${pokemon.type}</span> <br />
-              <span class="card--details">Abilities: ${pokemon.abilities}</span>
+              <span class="card--abilities">Abilities: ${pokemon.abilities}</span>
           </div>
       `;
   container.innerHTML += output;
