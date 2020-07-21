@@ -45,3 +45,24 @@ Once created, the file contains the following data, minus the comments:
 - include: defines which directory needs to be compiled. If the value is absent, the compiler will take every .ts file and compile it to JS even if an output directory is defined.
 
 ### Typescript Types
+
+##### Benefits of Types
+
+1. Provide a way to enhance code quality
+2. Code is more readable since variable types are defined.
+3. Define what a given variable should have as its value, and allow compiler to catch errors before runtime.
+
+##### Types
+
+- Types include number, string, boolean, enum, void, null, undefined, any, never, array, and tuple.
+- All types will not be covered here. Additional learning necessary.
+
+##### Basic TS Types
+
+```
+let foo: string = "test"
+let bar: number = 1
+let baz: string[] = ["This", "is", "a", "Test"]
+```
+
+Here, `foo` expects a string
