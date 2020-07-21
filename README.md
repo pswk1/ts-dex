@@ -4,6 +4,12 @@
 
 This application is one that makes a call to the Pokemon API to render various bits of data about each Pokemon. I will be using it as a learning tool for Typescript.
 
+### Installation and Usage
+
+1. Clone the repository to your local machine.
+2. Navigate to the root directory.
+3. Right click `index.html` and open in your browser.
+
 ## Notes
 
 ### Configuring Typescript with tsconfig
