@@ -42,6 +42,7 @@ main > h1 {
 
 .card {
   width: 12rem auto;
+  height: 100%;
   background: #444;
   color: #e66465;
   padding: 1rem;
