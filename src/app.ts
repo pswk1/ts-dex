@@ -32,7 +32,6 @@ const getPokemon = async (id: number): Promise<void> => {
     .join(', ');
 
   // Once data is fetched, transformedPokemon, a new object is created that mirrors the Pokemon interface
-
   const transformedPokemon = {
     id: pokemon.id,
     name: pokemon.name,
@@ -52,6 +51,8 @@ const showPokemon = (pokemon: IPokemon): void => {
               <h1 class="card--name">${pokemon.name}</h1>
               <span class="card--details">Type: ${pokemon.type}</span> <br />
               <span class="card--abilities">Abilities: ${pokemon.abilities}</span>
+              <br />
+              <a href='https://www.serebii.net/pokemon/${pokemon.name}' target="_blank" rel=”noopener”>more info</a>
           </div>
       `;
   container.innerHTML += output;
