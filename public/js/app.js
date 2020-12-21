@@ -46,7 +46,7 @@ const showPokemon = (pokemon) => {
               <span class="card--details">Type: ${pokemon.type}</span> <br />
               <span class="card--abilities">Abilities: ${pokemon.abilities}</span>
               <br />
-              <a href='https://www.serebii.net/pokemon/${pokemon.name}' target="_blank" rel=”noopener”>more info</a>
+              <a href='https://www.serebii.net/pokemon/${pokemon.name}' target="_blank" rel=”noopener”>More Info</a>
           </div>
       `;
     container.innerHTML += output;
