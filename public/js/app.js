@@ -12,8 +12,30 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 const container = document.getElementById('app');
 const pokemons = 151;
 // fetchData loops through number of pokemon to retrive and for each object call getPokemon
-const fetchData = () => {
+const getKanto = () => {
     for (let i = 1; i <= pokemons; i++) {
+        getPokemon(i);
+    }
+};
+let kantoBtn = document.getElementById('kanto');
+kantoBtn.addEventListener('click', (e) => getRegion(1, 151));
+let johtoBtn = document.getElementById('johto');
+johtoBtn.addEventListener('click', (e) => getRegion(152, 251));
+let hoennBtn = document.getElementById('hoenn');
+hoennBtn.addEventListener('click', (e) => getRegion(252, 386));
+let sinnohBtn = document.getElementById('sinnoh');
+sinnohBtn.addEventListener('click', (e) => getRegion(387, 493));
+let unovaBtn = document.getElementById('unova');
+unovaBtn.addEventListener('click', (e) => getRegion(494, 649));
+let kalosBtn = document.getElementById('kalos');
+kalosBtn.addEventListener('click', (e) => getRegion(650, 721));
+let alolaBtn = document.getElementById('alola');
+alolaBtn.addEventListener('click', (e) => getRegion(722, 809));
+let galarBtn = document.getElementById('galar');
+galarBtn.addEventListener('click', (e) => getRegion(810, 898));
+const getRegion = (start, end) => {
+    container.innerHTML = '';
+    for (let i = start; i <= end; i++) {
         getPokemon(i);
     }
 };
@@ -38,17 +60,17 @@ const getPokemon = (id) => __awaiter(void 0, void 0, void 0, function* () {
     showPokemon(transformedPokemon);
 });
 const showPokemon = (pokemon) => {
-    let output = `
-          <div class="card">
-              <span class="card--id">${pokemon.id}</span>
-              <img class="card--image" src=${pokemon.image} alt=${pokemon.name} />
-              <h1 class="card--name">${pokemon.name}</h1>
-              <span class="card--details">Type: ${pokemon.type}</span> <br />
-              <span class="card--abilities">Abilities: ${pokemon.abilities}</span>
-              <br />
-              <a href='https://www.serebii.net/pokemon/${pokemon.name}' target="_blank" rel=”noopener”>More Info</a>
-          </div>
+    let output = `     
+    <a href='https://www.serebii.net/pokemon/${pokemon.name}' target="_blank" rel=”noopener”>
+      <div class="card">
+        <span class="card--id">${pokemon.id}</span>
+        <img class="card--image" src=${pokemon.image} alt=${pokemon.name} />
+        <h1 class="card--name">${pokemon.name}</h1>
+        <span class="card--details">Type: ${pokemon.type}</span> <br />
+        <span class="card--abilities">Abilities: ${pokemon.abilities}</span>
+      </div>
+    </a>
       `;
     container.innerHTML += output;
 };
-fetchData();
+getKanto();
